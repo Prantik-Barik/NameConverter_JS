@@ -22,7 +22,7 @@ body{
     width: 810px;
     height: 500px;
     border-radius: 20px;
-    padding: 2rem 4rem;
+    padding: 2rem 2.5rem;
 }
 
 .big-text{
@@ -39,11 +39,12 @@ body{
     width: 30rem;
     padding: 1rem;
     border-radius: 10px;
-    border-color: #25cc88;
+    border:1.5px solid #25cc88;
     background-color: #02044a;
     font-size: 1rem;
     color: white;
     font-family: 'Poppins',sans-serif;
+    outline: none;
 }
 
 ::placeholder{
@@ -74,11 +75,16 @@ body{
 }
 
 .result-item{
-    background-color: #25cc88;
+    background-color: rgb(37, 204, 136,0.75);
     height: 120px;
-    width: 210px;
+    width: 225px;
     padding: 1rem 1.5rem;
     border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+    overflow-x: auto;
 }
 
 .result-item:nth-of-type(4),.result-item:nth-of-type(6){

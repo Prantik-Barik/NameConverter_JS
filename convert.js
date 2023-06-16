@@ -1,21 +1,4 @@
-const myInput = document.querySelector('.name-input')
-const myBtn = document.querySelector('.btn')
-const camelContainer = document.querySelector('.camelCase')
-const pascalContainer = document.querySelector('.pascalCase')
-const snakeContainer = document.querySelector('.snakeCase')
-const SSnakeContainer = document.querySelector('.SSnakeCase')
-const kebabContainer = document.querySelector('.kebabCase')
-const SKebabContainer = document.querySelector('.SKebabCase')
-let myName = ""
-myBtn.addEventListener('click',()=>{
-    myName = myInput.value;
-    camelContainer.innerHTML = toCamelCase(myName)
-    pascalContainer.innerHTML = toPascalCase(myName)
-    snakeContainer.innerHTML = toSnakeCase(myName)
-    SSnakeContainer.innerHTML = toScreamingSnakeCase(myName)
-    kebabContainer.innerHTML = toKebabCase(myName)
-    SKebabContainer.innerHTML = toScreamingKebabCase(myName)
-})
+let str = "Krishna Chan--dra Barik--"
 
 function toPascalCase(nameStr)
 {
@@ -25,8 +8,7 @@ function toPascalCase(nameStr)
     nameStr.split(" ").forEach((nm)=>{
         modifiedStr += nm[0].toUpperCase() + nm.slice(1,nm.length)
     })
-    
-    return modifiedStr
+    console.log(modifiedStr)
 }
 
 function toCamelCase(nameStr)
@@ -41,8 +23,7 @@ function toCamelCase(nameStr)
         else
         modifiedStr += nm[0].toUpperCase() + nm.slice(1,nm.length)
     })
-    
-    return modifiedStr
+    console.log(modifiedStr)
 }
 
 function toSnakeCase(nameStr)
@@ -50,8 +31,7 @@ function toSnakeCase(nameStr)
     nameStr = nameStr.replace(/[0-9-._]/g,"")
     nameStr = nameStr.toLowerCase().trim()
     let modifiedStr = nameStr.replaceAll(' ','_') 
-    
-    return modifiedStr
+    console.log(modifiedStr)
 }
 
 function toScreamingSnakeCase(nameStr)
@@ -59,8 +39,7 @@ function toScreamingSnakeCase(nameStr)
     nameStr = nameStr.replace(/[0-9-._]/g,"")
     nameStr = nameStr.toUpperCase().trim()
     let modifiedStr = nameStr.replaceAll(' ','_') 
-    
-    return modifiedStr
+    console.log(modifiedStr)
 }
 
 function toKebabCase(nameStr)
@@ -68,8 +47,7 @@ function toKebabCase(nameStr)
     nameStr = nameStr.replace(/[0-9-._]/g,"")
     nameStr = nameStr.toLowerCase().trim()
     let modifiedStr = nameStr.replaceAll(' ','-') 
-    
-    return modifiedStr
+    console.log(modifiedStr)
 }
 
 function toScreamingKebabCase(nameStr)
@@ -77,6 +55,12 @@ function toScreamingKebabCase(nameStr)
     nameStr = nameStr.replace(/[0-9-._]/g,"")
     nameStr = nameStr.toUpperCase().trim()
     let modifiedStr = nameStr.replaceAll(' ','-') 
-    
-    return modifiedStr
+    console.log(modifiedStr)
 }
+
+toCamelCase(str)
+toPascalCase(str)
+toSnakeCase(str)
+toScreamingSnakeCase(str)
+toKebabCase(str)
+toScreamingKebabCase(str)
